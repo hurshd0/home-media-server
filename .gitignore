@@ -135,6 +135,7 @@ dmypy.json
 # VSCode extension
 .vscode/
 /.favorites.json
+*.code-workspace
 
 # TypeScript incremental build states
 *.tsbuildinfo
