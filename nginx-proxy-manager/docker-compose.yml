@@ -1,0 +1,27 @@
+version: '3'
+services:
+  npm:
+    container_name: npm
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      - '80:80' # Public HTTP port
+      - '81:81' # Admin Web Port
+      - '443:443' # Public HTTPS port
+    volumes:
+      - $DOCKERDIR/appdata/npm/config:/config
+      - $DOCKERDIR/appdata/npm/letsencrypt:/etc/letsencrypt
+      - $DOCKERDIR/appdata/npm/data:/data
+    networks:
+      - npm_proxy
+    environment:
+      DB_SQLITE_FILE: "/config/database.sqlite"
+      DISABLE_IPV6: "true"
+
+networks:
+  npm_proxy:
+    name: npm_proxy
+    driver: bridge
+    ipam:
+      config:
+      - subnet: 192.168.89.0/24
