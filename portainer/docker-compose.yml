@@ -1,6 +1,6 @@
 version: '3'
 services:
-  portainer-ce:
+  portainer:
     container_name: portainer
     ports:
       - '8000:8000'
@@ -10,3 +10,11 @@ services:
       - '/home/docker/portainer_data:/data'
       - '/var/run/docker.sock:/var/run/docker.sock'
     image: portainer/portainer-ce:latest
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      - TZ=$TZ
+    networks:
+      - npm_proxy
+
+
