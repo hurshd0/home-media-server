@@ -156,6 +156,9 @@ coverage/
 *~
 .idea
 
+*.ovpn
+*.pem
+*.key
 
 
 
