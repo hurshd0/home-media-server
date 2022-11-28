@@ -17,7 +17,6 @@ services:
     environment:
       DB_SQLITE_FILE: "/config/database.sqlite"
       DISABLE_IPV6: "true"
-
 networks:
   npm_proxy:
     name: npm_proxy
