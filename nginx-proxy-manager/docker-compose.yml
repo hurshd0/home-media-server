@@ -13,7 +13,8 @@ services:
       - ${DOCKERDIR}/appdata/npm/letsencrypt:/etc/letsencrypt
       - ${DOCKERDIR}/appdata/npm/data:/data
     networks:
-      - npm_proxy
+      npm_proxy:
+        ipv4_address: 192.168.89.254
     environment:
       DB_SQLITE_FILE: "/config/database.sqlite"
       DISABLE_IPV6: "true"

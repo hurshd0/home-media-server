@@ -11,10 +11,12 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     image: portainer/portainer-ce:latest
     environment:
-      - TZ=${TZ}   
+      - TZ=${TZ}
+    networks:
+      npm_proxy:
+        ipv4_address: 192.168.89.253
 networks:
-  default:
+  npm_proxy:
     external: true
-    name: npm_proxy
 
 
