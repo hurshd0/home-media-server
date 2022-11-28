@@ -156,11 +156,15 @@ coverage/
 *~
 .idea
 
+# Ignore SSH or OpenVPN files
 *.ovpn
 *.pem
 *.key
 
-
+# Ignore docker data, logs, secrets
+docker/appdata/*
+docker/logs/*
+docker/secrets/*
 
 
 ########################
