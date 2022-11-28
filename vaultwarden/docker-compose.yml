@@ -15,7 +15,6 @@ services:
       - npm_proxy
     ports:
       - 280:80 # map 280 to any custom unused port (not 80)
-                        
 networks:
   npm_proxy:
     external: true
