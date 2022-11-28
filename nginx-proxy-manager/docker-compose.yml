@@ -9,9 +9,9 @@ services:
       - '81:81' # Admin Web Port
       - '443:443' # Public HTTPS port
     volumes:
-      - $DOCKERDIR/appdata/npm/config:/config
-      - $DOCKERDIR/appdata/npm/letsencrypt:/etc/letsencrypt
-      - $DOCKERDIR/appdata/npm/data:/data
+      - ${DOCKERDIR}/appdata/npm/config:/config
+      - ${DOCKERDIR}/appdata/npm/letsencrypt:/etc/letsencrypt
+      - ${DOCKERDIR}/appdata/npm/data:/data
     networks:
       - npm_proxy
     environment:
