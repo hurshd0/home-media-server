@@ -18,10 +18,11 @@ services:
     environment:
       DB_SQLITE_FILE: "/config/database.sqlite"
       DISABLE_IPV6: "true"
+      TZ: ${TZ}
 networks:
   npm_proxy:
     name: npm_proxy
     driver: bridge
     ipam:
       config:
-      - subnet: 192.168.89.0/24
+        - subnet: 192.168.89.0/24
