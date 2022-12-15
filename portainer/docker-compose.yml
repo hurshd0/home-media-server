@@ -14,7 +14,7 @@ services:
       TZ: ${TZ}
     networks:
       npm_proxy:
-        ipv4_address: 192.168.89.253
+        ipv4_address: 10.2.0.253
 networks:
   npm_proxy:
     external: true

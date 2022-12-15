@@ -14,11 +14,7 @@ services:
       - ${DOCKERDIR}/appdata/npm/data:/data
     networks:
       npm_proxy:
-        ipv4_address: 192.168.89.254
-    environment:
-      DB_SQLITE_FILE: "/config/database.sqlite"
-      DISABLE_IPV6: "true"
-      TZ: ${TZ}
+        ipv4_address: 10.2.0.254
 networks:
   npm_proxy:
     name: npm_proxy
