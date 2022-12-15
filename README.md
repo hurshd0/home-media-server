@@ -22,6 +22,10 @@ Discover other awesome self-hosted services at - https://github.com/awesome-self
 
 # Getting Started
 
-1. Create Python 3 virtual env using built-in venv
-2. Install ansible and configure your hosts
-3. Check docker is running and install desired docker apps
+1. Use old laptop or PC and install ubuntu or debian based distros alternatively host it in cloud via VPS like linode or digital ocean
+2. Install docker & docker compose plugin
+2. Git clone the repository
+3. cd into the repository and run docker compose for `nginx-proxy-manager` first than `portainer` second
+4. Run locally or buy a domain 
+
+# Debug tips / Issues you might run into
